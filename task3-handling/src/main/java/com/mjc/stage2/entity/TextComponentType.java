@@ -2,7 +2,7 @@ package com.mjc.stage2.entity;
 
 public enum TextComponentType {
     SENTENCE(" "),
-    WORD(""),
+    WORD(" "),
     SYMBOL("");
 
     private final String delimiter;

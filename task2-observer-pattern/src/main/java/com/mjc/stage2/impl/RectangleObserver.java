@@ -12,7 +12,7 @@ public class RectangleObserver implements Observer {
         Rectangle rectangle = event.getSource();
         RectangleValues values = new RectangleValues(
                 rectangle.getSideA()* rectangle.getSideB(),
-                rectangle.getSideA() + rectangle.getSideB()
+                rectangle.getSideA()*2 + rectangle.getSideB()*2
         );
 
         RectangleWarehouse.getInstance().put(rectangle.getId(), values);
