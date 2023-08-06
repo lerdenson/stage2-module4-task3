@@ -21,7 +21,7 @@ public class LexemeParser extends AbstractTextParser {
                         nextParser.parse(component, lexeme);
                     }
                 } else {
-                    component = new SymbolLeaf(lexeme.charAt(0), TextComponentType.SYMBOL);
+                    component = new SymbolLeaf(lexeme.charAt(0), TextComponentType.WORD);
                 }
 
                 abstractTextComponent.add(component);
