@@ -22,6 +22,7 @@ public class LexemeParser extends AbstractTextParser {
                         abstractTextComponent.add(component);
                     }
                 } else {
+                    lexeme += " ";
                     for (char symbol: lexeme.toCharArray()) {
                         abstractTextComponent.add(new SymbolLeaf(symbol, TextComponentType.SYMBOL));
                     }
