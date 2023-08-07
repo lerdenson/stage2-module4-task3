@@ -19,12 +19,15 @@ public class LexemeParser extends AbstractTextParser {
                     component = new TextComponent(TextComponentType.WORD);
                     if (nextParser != null) {
                         nextParser.parse(component, lexeme);
+                        abstractTextComponent.add(component);
                     }
                 } else {
-                    component = new SymbolLeaf(lexeme.charAt(0), TextComponentType.WORD);
+                    for (char symbol: lexeme.toCharArray()) {
+                        abstractTextComponent.add(new SymbolLeaf(symbol, TextComponentType.SYMBOL));
+                    }
                 }
 
-                abstractTextComponent.add(component);
+
             }
         } else if (nextParser != null) {
             nextParser.parse(abstractTextComponent, string);
